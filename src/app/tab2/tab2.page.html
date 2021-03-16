@@ -7,5 +7,20 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-card *ngIf="this.tebak == true">
+    <img src="https://media.skyegrid.id/wp-content/uploads/2020/08/TCDAVTH_EC001-1.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>vitolaman.id</ion-card-subtitle>
+      <ion-card-title>Vito Varian Laman</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Hi! I'm a Website Designer.
+    </ion-card-content>
+  </ion-card>
 
+  <ion-label>Masukan Angka</ion-label>
+  <ion-input type="number" [(ngModel)]="angka"></ion-input>
+  <button type="button" (click)="Cek()">
+    Tebak!
+</button> 
 </ion-content>

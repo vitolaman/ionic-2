@@ -6,7 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  angka : number;
+  random : number;
+  tebak : boolean;
+  buttonTitle:string = "Hide"; 
+  constructor() {
+    this.random = this.RandomAngka();
+    console.log(this.random);
+  }
 
-  constructor() {}
+  RandomAngka(){
+    return Math.floor(Math.random() * Math.floor(10))
+  }
 
+  Cek(){
+ 
+    if(this.angka == this.random){
+      this.tebak = true;
+    } else{
+      this.tebak = false;
+      alert("Salah!");
+    }
+  }
 }
